@@ -29,10 +29,10 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'XTRingChart/Classes/**/*'
-  
-  s.resource_bundles = {
-    'XTRingChart' => ['XTRingChart/Assets/*.png']
-  }
+  s.swift_version = '4.2'
+#s.resource_bundles = {
+#    'XTRingChart' => ['XTRingChart/Assets/*.png']
+#  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
