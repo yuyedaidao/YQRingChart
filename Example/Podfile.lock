@@ -1,0 +1,16 @@
+PODS:
+  - XTRingChart (0.1.0)
+
+DEPENDENCIES:
+  - XTRingChart (from `../`)
+
+EXTERNAL SOURCES:
+  XTRingChart:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XTRingChart: 8d346d6941b17837f0e9c41e521e15707645744d
+
+PODFILE CHECKSUM: 034ba408ee00e2badf6c9e5c6f355e7d4eba1d14
+
+COCOAPODS: 1.7.0.beta.1

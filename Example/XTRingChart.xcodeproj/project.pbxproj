@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552E025C2282C7A000437274 /* IMG_00AF0DBDECD3-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 552E025B2282C7A000437274 /* IMG_00AF0DBDECD3-1.jpeg */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		24DDD598D99CE1EF2C60D6BF /* Pods_XTRingChart_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XTRingChart_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		552E025B2282C7A000437274 /* IMG_00AF0DBDECD3-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "IMG_00AF0DBDECD3-1.jpeg"; sourceTree = "<group>"; };
 		5D2EB0E1CD3CA2075991F094 /* Pods-XTRingChart_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTRingChart_Example.release.xcconfig"; path = "Target Support Files/Pods-XTRingChart_Example/Pods-XTRingChart_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* XTRingChart_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XTRingChart_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,11 +44,11 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		666B117DB6C03AE5B54A8250 /* Pods_XTRingChart_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XTRingChart_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5BC1D48FE5F6B8409A5CE1 /* Pods-XTRingChart_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTRingChart_Tests.release.xcconfig"; path = "Target Support Files/Pods-XTRingChart_Tests/Pods-XTRingChart_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		7085612ABD0B4C6A44584CFC /* XTRingChart.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = XTRingChart.podspec; path = ../XTRingChart.podspec; sourceTree = "<group>"; };
+		7085612ABD0B4C6A44584CFC /* XTRingChart.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = XTRingChart.podspec; path = ../XTRingChart.podspec; sourceTree = "<group>"; };
 		9D63C2AE566695031D34C7D6 /* Pods-XTRingChart_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTRingChart_Example.debug.xcconfig"; path = "Target Support Files/Pods-XTRingChart_Example/Pods-XTRingChart_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CB8213C44D7C8A5E0132DDB0 /* Pods-XTRingChart_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTRingChart_Tests.debug.xcconfig"; path = "Target Support Files/Pods-XTRingChart_Tests/Pods-XTRingChart_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D28467371327D08EC951A73F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F3C4ABA32248649F5EE121B3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D28467371327D08EC951A73F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F3C4ABA32248649F5EE121B3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				552E025B2282C7A000437274 /* IMG_00AF0DBDECD3-1.jpeg */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for XTRingChart */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -156,7 +159,6 @@
 				CB8213C44D7C8A5E0132DDB0 /* Pods-XTRingChart_Tests.debug.xcconfig */,
 				6E5BC1D48FE5F6B8409A5CE1 /* Pods-XTRingChart_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,10 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = QXPHWM9EW2;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = QXPHWM9EW2;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -227,6 +231,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -247,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				552E025C2282C7A000437274 /* IMG_00AF0DBDECD3-1.jpeg in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
