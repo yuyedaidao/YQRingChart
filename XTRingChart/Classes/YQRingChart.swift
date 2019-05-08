@@ -148,10 +148,12 @@ open class YQRingChart: UIView {
         let halfHeight = bounds.height / 2
         let ringCenter = CGPoint(x: halfWidth / 2, y: halfHeight)
         let titleHeight = titleLineHeight * CGFloat(items.count)
-        let radius = min(max(titleHeight, ringMinHeight), ringMaxHeight) / 2
+        let shadowHeight: CGFloat = 2
+        let shadowBlur: CGFloat = 2
+        let radius = min(max(titleHeight, ringMinHeight), ringMaxHeight) / 2 - ringWidth / 2 - shadowHeight - shadowBlur
         context.setLineWidth(ringWidth)
         context.setLineCap(.round)
-        context.setShadow(offset: CGSize(width: 0, height: 2), blur: 2, color: shadowColor.cgColor)
+        context.setShadow(offset: CGSize(width: 0, height: shadowHeight), blur: shadowBlur, color: shadowColor.cgColor)
         var startAngle: CGFloat = 0
         for item in items {
             let angle = CGFloat(item.number) / CGFloat(total) * CGFloat.pi * 2
