@@ -59,9 +59,10 @@ open class YQRingChart: UIView {
     open var font = UIFont.systemFont(ofSize: 15)
     open var titleLineHeight: CGFloat = 24
     open var ringWidth: CGFloat = 22
-    open var shadowColor: UIColor = UIColor.gray
+    open var shadowColor: UIColor? = nil
     open var legendOffset: CGFloat = 30
-    
+    open var shadowOffset: CGSize = CGSize(width: 0, height: 2)
+    open var shadowBlur: CGFloat = 2
     private var total: Int = 0
     
     public override init(frame: CGRect) {
@@ -148,12 +149,12 @@ open class YQRingChart: UIView {
         let halfHeight = bounds.height / 2
         let ringCenter = CGPoint(x: halfWidth / 2, y: halfHeight)
         let titleHeight = titleLineHeight * CGFloat(items.count)
-        let shadowHeight: CGFloat = 2
-        let shadowBlur: CGFloat = 2
-        let radius = min(max(titleHeight, ringMinHeight), ringMaxHeight) / 2 - ringWidth / 2 - shadowHeight - shadowBlur
+        let radius = min(max(titleHeight, ringMinHeight), ringMaxHeight) / 2 - ringWidth / 2 - (shadowColor != nil ? shadowOffset.height + shadowBlur : 0)
         context.setLineWidth(ringWidth)
         context.setLineCap(.round)
-        context.setShadow(offset: CGSize(width: 0, height: shadowHeight), blur: shadowBlur, color: shadowColor.cgColor)
+        if let shadowColor = self.shadowColor {
+            context.setShadow(offset: shadowOffset, blur: shadowBlur, color: shadowColor.cgColor)
+        }
         var startAngle: CGFloat = 0
         for item in items {
             let angle = CGFloat(item.number) / CGFloat(total) * CGFloat.pi * 2
