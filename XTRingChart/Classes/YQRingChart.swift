@@ -28,9 +28,9 @@ class YQRingChartCircle: UIView {
 }
 
 open class YQRingChartItem {
-    let number: Int
-    let title: String
-    let color: UIColor
+    public let number: Int
+    public let title: String
+    public let color: UIColor
     
     public init(number: Int, title: String, color: UIColor) {
         self.number = number
@@ -63,6 +63,7 @@ open class YQRingChart: UIView {
     open var legendOffset: CGFloat = 30
     open var shadowOffset: CGSize = CGSize(width: 0, height: 2)
     open var shadowBlur: CGFloat = 2
+    open var emptyColor = UIColor.gray.withAlphaComponent(0.6)
     private var total: Int = 0
     
     public override init(frame: CGRect) {
@@ -114,7 +115,7 @@ open class YQRingChart: UIView {
         circleStack.widthAnchor.constraint(equalToConstant: titleLineHeight).isActive = true
         let percentStack = UIStackView(arrangedSubviews: items.map({ (item) -> UILabel in
             let label = UILabel()
-            label.text = "\(Int(Float(item.number) / Float(total) * 100))%"
+            label.text = total > 0 ? "\(Int(Float(item.number) / Float(total) * 100))%" : "0%"
             label.font = font
             label.textAlignment = .left
             return label
@@ -154,6 +155,13 @@ open class YQRingChart: UIView {
         context.setLineCap(.round)
         if let shadowColor = self.shadowColor {
             context.setShadow(offset: shadowOffset, blur: shadowBlur, color: shadowColor.cgColor)
+        }
+        guard total > 0 else {
+            //直接画个灰色的圆
+            emptyColor.setStroke()
+            context.addPath(UIBezierPath(arcCenter: ringCenter, radius: radius, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).cgPath)
+            context.strokePath()
+            return
         }
         var startAngle: CGFloat = 0
         for item in items {
