@@ -87,6 +87,10 @@ open class YQRingChart: UIView {
     }
     
     func layoutItems(_ items: [YQRingChartItem]?){
+        let subviews = legend.arrangedSubviews
+        for view in subviews {
+            view.removeFromSuperview()
+        }
         guard let items = self.items else {
             return
         }
@@ -94,10 +98,6 @@ open class YQRingChart: UIView {
             return result + item.number
         })
         setNeedsDisplay()
-        let subviews = legend.arrangedSubviews
-        for view in subviews {
-            legend.removeArrangedSubview(view)
-        }
         let circleStack = UIStackView(arrangedSubviews: items.map { (item) -> YQRingChartCircle in
             let view = YQRingChartCircle(item.color)
             view.backgroundColor = backgroundColor
