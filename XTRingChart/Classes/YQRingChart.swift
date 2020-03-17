@@ -115,7 +115,7 @@ open class YQRingChart: UIView {
         circleStack.widthAnchor.constraint(equalToConstant: titleLineHeight).isActive = true
         let percentStack = UIStackView(arrangedSubviews: items.map({ (item) -> UILabel in
             let label = UILabel()
-            label.text = total > 0 ? "\(Int(Float(item.number) / Float(total) * 100))%" : "0%"
+            label.text = total > 0 ? "\(Int(roundf((Float(item.number) / Float(total) * 100))))%" : "0%"
             label.font = font
             label.textAlignment = .left
             return label
